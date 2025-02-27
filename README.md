@@ -8,13 +8,18 @@ This Project is a **Gold Price Prediction Web Application** built using **Flask*
 - Interactive UI for user input and prediction results
 - Deployed locally
 ## Technology Used
-- **Fronted**: HTML, CSS, Javascript
-- **Backend**: Flask(Python)
-- **Machine Learning**: Scikit-learn, Pandas, NumPy;
+- **Fronted**: HTML, CSS, Javascript # VScode
+- **Backend**: Flask(Python) #VScode
+- **Machine Learning**: Scikit-learn, Pandas, NumPy. # Google Colab
 - **Algoritmes**: Polynomial regression
 - **Deployment**: Flask server
 ## DataSet
-
+DataSet contains two coloums:
+1. Year
+2. Corresponding price in RS.
+```
+DataSet.xlsx
+```
 ## Installation and Setup
 ### Prerequisites
 Ensure you have the followig installed:
@@ -31,11 +36,28 @@ cd FlaskGoldPredict
 ```
 pip install
 ```
-3. **Run the Flask App**
+3. **Files Arrangement**
+```
+FlaskGoldPredict/
+│── static/             # Static files (CSS, JavaScript, images)
+│   │── Gold7.jpg       # Sample gold image
+│   │── script.js       # JavaScript file for frontend functionality
+│   │── styles.css      # CSS file for styling
+│── templates/          # HTML templates
+│   │── index.html      # Main frontend page
+│── polynomial_regressin_model.pkl  # Machine learning model file
+│── app.py              # Flask application
+│── README.md           # Project documentation
+```
+And you should run the machine learning file in Google Colab to get .pkl file
+```
+Gold_vs_Year_(Polynomoial Regression).ipynb
+```
+4. **Run the Flask App**
 ```
 python app.py
 ```
-4. **Access the Web Application** Open your browser and go to:
+5. **Access the Web Application** Open your browser and go to:
 ```
 http://127.0.0.1:5000/
 ```
@@ -45,11 +67,10 @@ http://127.0.0.1:5000/
 |-----------|--------|-------------|
 | `/`       | GET    | Home page |
 | `/predict`| POST   | Predicts gold price based on input data |
-## Screenshots
-### Home Page
-### Predictin Result
 ## Future Improvements
 - Improve the machine learning model accuracy
 - Add more economic indicators as features
 - Deploy on a cloud platform
 - Improve UI with better visualization
+
+**Feel free to contribute and improve the project!**
